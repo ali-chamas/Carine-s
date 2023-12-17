@@ -14,7 +14,7 @@ export const products=[
 const ProductCard = ({product}) => {
     
   return (
-    <a href={`/collection/${product.id}`} className='bg-white flex flex-col shadow-lg p-3  rounded-lg gap-3 max-w-[200px] md:max-w-[250px] hover:scale-[1.02] hover:-z-10'>
+    <a href={`/collection/${product.id}`} className='bg-white flex flex-col shadow-lg p-3  rounded-lg gap-3 max-w-[200px] md:max-w-[250px] hover:bg-gray-50'>
         <img src={product.img} alt=""  className=' h-full w-full  rounded-lg self-center'/>
         <h2 className='font-bold'>{product.title}</h2>
         <p>$ {product.price}</p>
