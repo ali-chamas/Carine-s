@@ -2,7 +2,7 @@ import React from 'react'
 import { AiOutlineCopyrightCircle,AiOutlineInstagram,AiOutlineWhatsApp} from'react-icons/ai'
 const Footer = () => {
   return (
-    <div className='flex flex-col h-full gap-3 items-center w-full  py-10 '>
+    <div className='flex flex-col h-full px-5 md:px-20 xl:px-28 bg-gray-50 gap-3 items-center w-full  py-10 '>
 
     
     <div className='flex justify-between w-full items-center'>

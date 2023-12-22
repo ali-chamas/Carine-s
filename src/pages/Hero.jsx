@@ -52,25 +52,26 @@ const Hero = () => {
 
 
       <h1 className=' text-3xl md:text-4xl  xl:text-5xl font-semibold self-start text-center max-w-[800px] w-max'>
-          Elevate your <span className='text-fuchsia-500 '>style</span> 
+          Elevate your <span className='text-pink-900 '>style</span> 
       </h1>
       
       <h1 className='text-3xl  md:text-4xl xl:text-5xl font-semibold self-end text-center'>
-      and be <span className='text-fuchsia-500'>yourself</span> 
+      and be <span className='text-pink-900'>yourself</span> 
       </h1>
+      <small className='self-center'>Selling loved women's clothing</small>
       <a href='#featured' className='py-2 px-5 lg:text-lg self-center bg-black rounded-lg text-white hover:opacity-90 transition-all duration-150'>
         Shop Now
       </a>
-      <div className='bg-fuchsia-500 bg-opacity-10 blur-xl absolute w-[300px] h-[100px] lg:w-[360px] xl:w-[400px] -z-10'/>
+      <div className='bg-pink-900 bg-opacity-10 blur-xl absolute w-[300px] h-[100px] lg:w-[360px] xl:w-[400px] -z-10'/>
       
     </m.div>
     
       {/* <img src={pic3} className='h-[160px] w-[120px] self-end rounded-xl shadow-lg shadow-gray-400'/> */}
 
-      <div className='absolute h-[90vh]  bg-fuchsia-500 bg-opacity-10 -z-10 w-[2px] top-0 left-20 md:mx-10 xl:mx-20'/>
-      <div className='absolute h-[90vh]  bg-fuchsia-500 bg-opacity-10 -z-10 w-[2px] top-0 right-20 md:mx-10 xl:mx-20'/>
-      <div className='absolute h-[90vh]  bg-fuchsia-500 bg-opacity-10 -z-10 w-[2px] top-0 left-8 md:mx-10 xl:mx-20'/>
-      <div className='absolute h-[90vh]  bg-fuchsia-500 bg-opacity-10 -z-10 w-[2px] top-0 right-8 md:mx-10 xl:mx-20'/>
+      <div className='absolute h-[90vh]  bg-pink-900 bg-opacity-10 -z-10 w-[2px] top-0 left-20 md:mx-10 xl:mx-20'/>
+      <div className='absolute h-[90vh]  bg-pink-900 bg-opacity-10 -z-10 w-[2px] top-0 right-20 md:mx-10 xl:mx-20'/>
+      <div className='absolute h-[90vh]  bg-pink-900 bg-opacity-10 -z-10 w-[2px] top-0 left-8 md:mx-10 xl:mx-20'/>
+      <div className='absolute h-[90vh]  bg-pink-900 bg-opacity-10 -z-10 w-[2px] top-0 right-8 md:mx-10 xl:mx-20'/>
     </div>
   ) 
 }
