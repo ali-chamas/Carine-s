@@ -24,7 +24,7 @@ const Featured = () => {
     
     fetchProducts()
   },[])  
-  console.log(products)
+
  
   return (
     <div id='featured' className='h-full  mb-10 flex flex-col gap-6'>

@@ -1,14 +1,41 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion as m } from 'framer-motion'
-import {products} from '../components/ProductCard'
+import SearchProduct from './SearchProduct';
+
 const SearchBar = () => {
   const [items,setItems]=useState([]);
   const [searchValue,setSearchValue]=useState(false)
 
+  const [loading,setLoading]=useState(false)
+  const [products,setProducts]=useState([])
+  const fetchProducts=async()=>{
+   setLoading(true)
+   try{
+     
+     const res = await fetch('https://ali-mobile.000webhostapp.com/getProducts.php');
+      setProducts(await res.json())
+      setLoading(false)
+   }
+   catch(err){
+     console.log(err)
+   }
+ }
+
+ 
+
+
+
+
+ useEffect(()=>{
+   
+   fetchProducts()
+   
+ },[]) 
+
     const searchFunction=(e)=>{
      if(e.target.value!=='' || e.target.value){
       setSearchValue(true)
-      const newItems = products.filter(product=>product.title.toLowerCase().includes(e.target.value.toLowerCase()));
+      const newItems = products.filter(product=>product.name.toLowerCase().includes(e.target.value.toLowerCase()));
       setItems(newItems)
      }
      else if(e.target.value=='' || !e.target.value){
@@ -43,28 +70,7 @@ const SearchBar = () => {
 
           <div className='flex flex-col max-h-[50vh]  gap-5 w-full items-center text-base  overflow-y-auto'>
             {items.map(item=>(
-              <a
-              key={item.id}
-              href={`/collection/${item.id}`} 
-              className='flex hover:bg-gray-300/10  items-center p-3 w-full border-b justify-between'>
-                <div className='flex flex-col  gap-3'>
-                <p>{item.title}</p>
-                {
-                  
-                    item.onSale ?
-                    <div className='flex  items-center gap-4 md:gap-6 text-sm '>
-                      <p className='line-through text-gray-600'>$ {parseFloat(item.price).toFixed(2)}</p>
-                      <p className='text-red-700'>$ {parseFloat(item.newPrice).toFixed(2)}</p>
-                      
-                    </div>
-                     :
-                     <p className='text-sm'>$ {item.price}</p>
-                  
-                }
-                </div>
-                <img src={item.img} className='w-[70px] h-[100px] rounded-xl' alt="" />
-                
-              </a>
+              <SearchProduct item={item} key={item.pid}/>
             ))}
           </div>
 
