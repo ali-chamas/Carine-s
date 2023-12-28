@@ -5,4 +5,21 @@
 html{
     font-family: 'Lora', serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+.track {
+    
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 25s linear infinite;
+    width: 180%;
+  }
+  .track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    from { transform: translateX(50%); }
+    to { transform: translateX(-150%); }
+  }
+
+ 

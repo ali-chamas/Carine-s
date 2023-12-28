@@ -16,7 +16,7 @@ const Navbar = () => {
     const [openMenu,setOpenMenu]=useState(false)
     const [openSearch,setOpenSearch]=useState(false)
   return (
-    <div className='flex h-[70px]  items-center justify-between  py-5 font-extrabold text-2xl md:text-3xl  2xl:text-4xl sticky top-0 bg-[rgb(255,255,255,0.97)] px-5 md:px-20 xl:px-28 '>
+    <div className='flex h-[70px]  items-center justify-between  py-5 font-extrabold text-2xl md:text-3xl  2xl:text-4xl sticky top-0 bg-[rgb(255,255,255,0.97)] px-5 md:px-20 xl:px-28 z-50 '>
 
         <button className=' hover:opacity-90 ' onClick={()=>{setOpenMenu(open=>!open);setOpenSearch(false)}}>
             {

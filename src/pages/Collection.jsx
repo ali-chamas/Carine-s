@@ -2,6 +2,10 @@ import React from 'react'
 
 
 import FilterProducts from '../components/FilterProducts';
+
+
+
+
 const Collection = () => {
 
 
