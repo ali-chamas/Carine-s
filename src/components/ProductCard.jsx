@@ -22,12 +22,12 @@ const ProductCard = ({product}) => {
 
   return (
   
-    <a href={`/collection/${product.pid}`} className={`bg-white flex flex-col shadow-lg p-3  rounded-lg gap-3 max-w-[200px] md:max-w-[220px] hover:bg-gray-50  ${product.quantity<=0 && 'opacity-80 -z-10'}`}>
+    <a href={`/collection/${product.pid}`} className={`bg-white flex flex-col shadow-lg p-3  rounded-lg gap-3 i max-w-[200px] md:max-w-[220px] hover:bg-gray-50  ${product.quantity<=0 && 'opacity-80 -z-10'}`}>
 
-      <div className='relative'>
+      <div className='relative self-center'>
 
       {
-        images.length>0 ?<img src={images[0].imageString} alt=""  className=' h-full w-full  rounded-lg self-center  z-0 min-h-[200px] md:min-h-[250px] max-h-[200px] md:max-h-[250px] min-w-[140px] max-w-[140px] md:min-w-[180px] md:max-w-[180px]'/> : <div className='  h-full w-full  rounded-lg self-center bg-gray-200 z-0 min-h-[200px] md:min-h-[250px] max-h-[200px] md:max-h-[250px] min-w-[140px] max-w-[140px] md:min-w-[180px] md:max-w-[180px]'/>
+        images.length>0 ?<img src={images[0].imageString} alt=""  className=' h-full w-full  rounded-lg self-center  z-0 min-h-[200px]  md:min-h-[250px] max-h-[200px] md:max-h-[250px] min-w-[140px] max-w-[140px] md:min-w-[180px] md:max-w-[180px]'/> : <div className='  h-full w-full  rounded-lg self-center bg-gray-200 z-0 min-h-[200px] md:min-h-[250px] max-h-[200px] md:max-h-[250px] min-w-[140px] max-w-[140px] md:min-w-[180px] md:max-w-[180px]'/>
       }
         
         {product.quantity<=0 && 
