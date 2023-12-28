@@ -88,9 +88,9 @@ const ProductDetails = () => {
          <p className=' font-semibold'>sizes:</p>
           {sizes.map((size,i)=>(
             
-            <div key={i} className='bg-gray-100 p-2 rounded-2xl w-[30px] lg:w-[40px] text-center '>
+            <p key={i} className='bg-gray-100 p-2 rounded-2xl w-[33px] lg:w-[40px]  flex items-center justify-center'>
               {size.size}
-            </div>
+            </p>
           ))}
         </div>
         <div className='lg:text-lg flex self-start items-center gap-4'>
