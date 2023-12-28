@@ -71,8 +71,18 @@ const ProductDetails = () => {
         </div> 
         <div className='flex flex-col gap-5 w-full md:border-l border-gray-700 md:px-5'>
         <h1 className='text-3xl md:text-4xl lg:text-5xl font-semibold'>{product[0].name}</h1>
+
         {
-          product.onSale==1?
+          
+          product[0].quantity<=0 ? 
+          <div className='text-xl font-semibold'>
+            Sorry this product is out of stock,
+            How did you get here anyway :o
+          </div> :
+
+        
+          <div>
+          {product.onSale==1?
           
           <div className='flex   items-center gap-4 md:gap-6 self-start text-xl font-semibold'>
           <p className='line-through text-gray-600'>$ {parseFloat(product[0].price).toFixed(2)}</p>
@@ -107,6 +117,8 @@ const ProductDetails = () => {
         <p className=' font-semibold'>Description:</p>
         <p className='text-sm lg:text-base'>{product[0].description}</p>
         </div>
+        </div>
+}
         </div>
       </div>
 
