@@ -57,7 +57,7 @@ const ProductDetails = () => {
       <div className='h-full flex  flex-col  md:items-center md:flex-row gap-5 md:gap-8  '>
        
         <div className=' flex flex-col gap-2 self-center w-full '>
-        <img src={images[imageIndex].imageString} className='w-[300px]   border-2  h-[300px] lg:h-[400px] lg:w-[380px] rounded-xl ' alt="" />
+        <img src={images[imageIndex].imageString} className='w-[200px]   border-2  h-[300px] lg:h-[400px] lg:w-[320px] rounded-xl ' alt="" />
         <div className='flex gap-2  items-center '>
           {images?.map((image,i)=>(
            
@@ -127,11 +127,13 @@ const ProductDetails = () => {
           <div className={`flex  gap-5 overflow-x-auto md:grid md:grid-cols-3 lg:grid-cols-4 pb-5`}>
             {products.map((prod,i)=>(
               prod.category===product[0].category&&
+              prod.quantity>0&&
               prod.pid!=product[0].pid ?
               <ProductCard product={prod} key={i}/>
               :
               prod.pid!=product[0].pid &&
-              <ProductCard product={prod} key={i}/>
+              prod.quantity>0&&
+              <ProductCard product={prod} key={i} />
             ))}
           </div>
       </div>

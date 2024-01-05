@@ -9,7 +9,7 @@ export const links=[
     {id:1,title:'Home',href:'/'},
     
     {id:2,title:'Collection',href:'/collection'},
-    {id:3,title:'About',href:'#about'},
+    
     
 ]
 const Navbar = () => {
